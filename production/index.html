@@ -182,7 +182,7 @@
                           </p>
                           <div class="x_panel">
                             <div class="x_content">
-                              <table class="table table-stripped">
+                              <table class="table table-stripped" id="tabla-hijos">
                                 <thead>
                                   <tr>
                                     <th>Año de Nacimiento</th>
@@ -190,9 +190,55 @@
                                     <th>Grado entre 33% y 65%</th>
                                     <th>Grado igual o superior al 65%</th>
                                     <th>Ayuda a terceras personas o movibilidad reducida</th>
+                                    <th>Conviven únicamente con Vd y con ningún otro familiar</th>
+                                    <th>Opciones</th>
                                   </tr>
                                 </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                        <select class="form-control">
+                                          <option>2012</option>
+                                          <option>2011</option>
+                                          <option>2010</option>
+                                          <option>2009</option>
+                                          <option>2008</option>
+                                          <option>2007</option>
+                                          <option>2006</option>
+                                          <option>2005</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                      <select class="form-control">
+                                        <option>2012</option>
+                                        <option>2011</option>
+                                        <option>2010</option>
+                                        <option>2009</option>
+                                        <option>2008</option>
+                                        <option>2007</option>
+                                        <option>2006</option>
+                                        <option>2005</option>
+                                      </select>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="discapacidad" value="33-65">
+                                    </td>
+                                    <td>
+                                      <input type="radio" name="discapacidad" value="65">
+                                    </td>
+                                    <td>
+                                      <input type="checkbox" name="discapacidad" value="ayuda">
+                                    </td>
+                                    <td>
+                                      <input type="checkbox" name="discapacidad" value="convivencia">
+                                    </td>
+                                    <td>
+                                      <button type = "button" class="btn btn-danger" onclick="removeRow()">Borrar</button>
+                                    </td>
+                                  </tr>
+                                </tbody>
                               </table>
+                              <button type = "button" class="btn btn-success" onclick="addRow()">Añadir</button>
                             </div>
                           </div>
                         </div>
@@ -258,7 +304,8 @@
     <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-
+    <!-- Funciones añadidas -->
+    <script src="js/funciones.js"></script>
     <!-- jQuery Smart Wizard -->
     <script>
       $(document).ready(function() {
