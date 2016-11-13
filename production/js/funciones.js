@@ -31,18 +31,19 @@ function addRow(){
       '<input type="radio" name="discapacidad" value="65">' +
     '</td>' +
     '<td>' +
-      '<input type="checkbox" name="discapacidad" value="ayuda">' +
+      '<input type="radio" name="ayuda" value="ayuda">' +
     '</td>' +
     '<td>' +
-      '<input type="checkbox" name="discapacidad" value="convivencia">' +
+      '<input type="radio" name="convivencia" value="convivencia">' +
     '</td>' +
     '<td>' +
-      '<button type = "button" class="btn btn-danger">Borrar</button>' +
+      '<button type = "button" class="btn btn-danger" onclick="removeRow(this)">Borrar</button>' +
     '</td>' +
   '</tr>');
 
 }
 
-function removeRow(){
-  $('#tabla-hijos').children('tr').remove();
+function removeRow(fila){
+    var i = fila.parentNode.parentNode.rowIndex;
+    document.getElementById("tabla-hijos").deleteRow(i);
 }
