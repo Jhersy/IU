@@ -28,23 +28,11 @@
           <div class="">
             <div class="clearfix"></div>
 
-            <div class="row">
 
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <h3><strong>Impuesto sobre la Renta de las Personas Físicas</strong></h3>
                   <div class="x_title">
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
                   </div>
                   <div class="x_content">
 
@@ -102,22 +90,20 @@
                         <div class=""><h3>Datos del perceptor</h3><div class="clearfix"></div></div>
                         <form class="form-horizontal form-label-left">
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nif">NIF <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="nif" required="required" class="form-control col-md-7 col-xs-12">
-                            </div>
-                          </div>
-                          <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="apellido-nombre">Apellido y Nombre <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="apellido-nombre" name="apellido-nombre" required="required" class="form-control col-md-7 col-xs-12">
+                              <input type="text" id="apellido-nombre" name="apellido-nombre" required="required" class="form-control col-md-12 col-xs-12">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Año de nacimiento</label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nif">NIF <span class="required">*</span>
+                            </label>
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                              <input type="text" id="nif" required="required" class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <label for="middle-name" class="control-label col-md-2 col-sm-2 col-xs-12">Año de nacimiento</label>
+                            <div class="col-md-2 col-sm-2 col-xs-12">
                               <select class="form-control">
                                 <option>2012</option>
                                 <option>2011</option>
@@ -136,11 +122,10 @@
                             <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Situación familiar</h2>
                             <div class="clearfix"></div>
                             <div class="radio">
-	                            <label for="middle-name" class="control-label col-md-6 col-sm-6 col-xs-8">
-	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	                            Soltero/a, viudo/a, divorciado/a o separado/a </label>                    
-	                            <ul class="nav navbar-left panel_toolbox">
-			                      <li class="dropdown">
+                            	<div class="col-md-3 col-sm-3"></div>
+	                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+	                            Soltero/a, viudo/a, divorciado/a o separado/a                     
 			                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 			                        <ul class="dropdown-menu" role="menu">
 			                          <li>
@@ -148,27 +133,58 @@
 										</p>
 			                          </li>
 			                        </ul>
-			                      </li>
-			                    </ul>
-		                    </div>
-		                    <div class="clearfix"></div>
-		                    <div class="radio">
-	                            <label for="middle-name" class="control-label col-md-5 col-sm-5 col-xs-10">
-	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	                            Casado/a y no separado/a  </label>                    
-	                            <ul class="nav navbar-left panel_toolbox">
-			                      <li class="dropdown">
+			                     </label> 
+			                    <div class="clearfix"></div>
+			                    <div class="col-md-3 col-sm-3"></div>
+	                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+	                            Casado/a y no separado/a                        
 			                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
 			                        <ul class="dropdown-menu" role="menu">
 			                          <li>
 			                          		<p>Legalmente cuyo cónyuge no obtiene rentas superiores a 1.500 euros anuales, excluidas las exentas</p>
 			                          </li>
 			                        </ul>
-			                      </li>
-			                    </ul>
-		                    </div>
+			                    </label>
+			                    <div class="clearfix"></div>
+			                    <div class="col-md-3 col-sm-3"></div>
+	                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Situación familiar distinta de las anteriores         
+			                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+			                        <ul class="dropdown-menu" role="menu">
+			                          <li>
+			                          		<p>(solteros sin hijos, casados cuyo cónyuge obtiene rentas superiores a 1.500 euros anuales, ..., etc.)(Marque también esta casilla si no desea manifestar su situación familiar).</p>
+			                          </li>
+			                        </ul>
+			                    </label> 
+			                <div class="clearfix"></div>
                           </div>
                         </form>
+                        <form class="form-horizontal form-label-left">
+                        	<div class="form-group">
+	                            <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Discapacidad</h2>
+	                            <div class="clearfix"></div>
+	                            <div class="radio">
+									<div class="col-md-3 col-sm-3"></div>
+		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+		                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+		                            Entre 33%  y 65%
+		                            </label>
+		                            <div class="clearfix"></div>
+									<div class="col-md-3 col-sm-3"></div>
+		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+		                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+		                            Superior a 65%
+		                            </label>		                            
+		                            <div class="clearfix"></div>
+									<div class="col-md-3 col-sm-3"></div>
+		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+		                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+		                            Necesidad de ayuda de terceras personas o movilidad reducida
+		                            </label>                         
+	                            </div>
+                        	</div>
+                	    </form>
 
                       </div>
                       <div id="step-2">
@@ -217,7 +233,6 @@
                 </div>
               </div>
             </div>
-        </div>
         <!-- /page content -->
 
         <!-- footer content -->
