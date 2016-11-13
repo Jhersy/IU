@@ -1,5 +1,12 @@
-function addRow(){
-  $('#tabla-hijos tr:last').after('<tr>' +
+function addRow(tabla){
+
+  if(tabla == "tabla-hijos"){
+    var borrar = "removeRow";
+  }else{
+    var borrar = "removeRowAscendientes";
+  }
+
+  $('#' + tabla + ' tr:last').after('<tr>' +
     '<td>' +
         '<select class="form-control">' +
           '<option>2012</option>' +
@@ -37,7 +44,7 @@ function addRow(){
       '<input type="radio" name="convivencia" value="convivencia">' +
     '</td>' +
     '<td>' +
-      '<button type = "button" class="btn btn-danger" onclick="removeRow(this)">Borrar</button>' +
+      '<button type = "button" class="btn btn-danger" onclick="'+ borrar +'(this)">Borrar</button>' +
     '</td>' +
   '</tr>');
 
@@ -46,4 +53,9 @@ function addRow(){
 function removeRow(fila){
     var i = fila.parentNode.parentNode.rowIndex;
     document.getElementById("tabla-hijos").deleteRow(i);
+}
+
+function removeRowAscendientes(fila){
+    var i = fila.parentNode.parentNode.rowIndex;
+    document.getElementById("tabla-ascendientes").deleteRow(i);
 }

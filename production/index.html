@@ -198,7 +198,7 @@
                                   <tr></tr>
                                 </tbody>
                               </table>
-                              <button type = "button" class="btn btn-success" onclick="addRow()">Añadir</button>
+                              <button type = "button" class="btn btn-success" onclick="addRow('tabla-hijos')">Añadir</button>
                             </div>
                           </div>
                         </div>
@@ -206,7 +206,31 @@
                           menores de edad si son discapacitados, que conviven
                           con el perceptor</h2>
                           <div class="linea-ascendientes">
-
+                            <p>Datos de los ascendientes mayores de 65 años
+                              (o menores de dicha edad si son discapacitados)
+                              que conviven con Vd. durante, al menos,
+                              la mitad del año y que no tienen rentas
+                              anuales superiores a 8.000 euros.</p>
+                              <div class="x_panel">
+                                <div class="x_content">
+                                  <table class="table table-stripped" id="tabla-ascendientes">
+                                    <thead>
+                                      <tr>
+                                        <th>Año de Nacimiento</th>
+                                        <th>Grado entre 33% y 65%</th>
+                                        <th>Grado igual o superior al 65%</th>
+                                        <th>Ayuda a terceras personas o movibilidad reducida</th>
+                                        <th>Conviven únicamente con Vd y con ningún otro familiar</th>
+                                        <th>Opciones</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr></tr>
+                                    </tbody>
+                                  </table>
+                                  <button type = "button" class="btn btn-success" onclick="addRow('tabla-ascendientes')">Añadir</button>
+                                </div>
+                              </div>
                           </div>
                       </div>
                       <div id="step-3">
