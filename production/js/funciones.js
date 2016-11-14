@@ -1,6 +1,3 @@
-$(document).ready(function(){
-
-}
 function addRow(tabla){
 
   if(tabla == "tabla-hijos"){
