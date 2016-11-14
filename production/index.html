@@ -249,11 +249,42 @@ posteriormente usted no haya aplicado la citada reducción en su correspondiente
                                 <thead>
                                   <tr>
                                     <th>Año de Nacimiento</th>
-                                    <th>Año de adopción o acogimiento</th>
-                                    <th>Grado entre 33% y 65%</th>
-                                    <th>Grado igual o superior al 65%</th>
-                                    <th>Ayuda a terceras personas o movibilidad reducida</th>
-                                    <th>Conviven únicamente con Vd y con ningún otro familiar</th>
+                                    <th>Año de adopción o acogimiento
+        			                        <a href="#" data-toggle="popover" title="Información"
+                                      data-content="Solamente en el caso de hijos adoptados
+                                      o de menores acogidos. Tratándose de hijos adoptados
+                                      que previamente hubieran estado acogidos, indique
+                                      únicamente el año del acogimiento."><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    </th>
+                                    <th>Grado entre 33% y 65%
+                                      <a href="#" data-toggle="popover" title="Hijos o descendientes con discapacidad(grado de minusvalía reconocido)"
+                                      data-content="Si alguno de los hijos o descendientes
+                                      tiene reconocido un grado de minusvalía igual o superior al 33 por 100,
+                                      marque alguna de la/s casilla/s que corresponda/n a su situación">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    </th>
+                                    <th>Grado igual o superior al 65%
+                                      <a href="#" data-toggle="popover" title="Hijos o descendientes con discapacidad(grado de minusvalía reconocido)"
+                                      data-content="Si alguno de los hijos o descendientes
+                                      tiene reconocido un grado de minusvalía igual o superior al 33 por 100,
+                                      marque alguna de la/s casilla/s que corresponda/n a su situación">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    </th>
+                                    <th>Ayuda acreditada a terceras personas o de movibilidad reducida
+                                      <a href="#" data-toggle="popover" title="Hijos o descendientes con discapacidad(grado de minusvalía reconocido)"
+                                      data-content="Si alguno de los hijos o descendientes
+                                      tiene reconocido un grado de minusvalía igual o superior al 33 por 100,
+                                      marque alguna de la/s casilla/s que corresponda/n a su situación">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    </th>
+                                    <th>Conviven únicamente con Vd y con ningún otro familiar
+                                      <a href="#" data-toggle="popover" title="Cómputo por entero de hijos o descendientes"
+                                      data-content="En caso de hijos que convivan únicamente con Vd., sin
+                                      convivir también con el otro progenitor (padre o madre),
+                                      o de nietos que convivan únicamente con Vd., sin convivir
+                                      también con ningún otro de sus abuelos, indíquelo
+                                      marcando esta casilla."><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    </th>
                                     <th>Opciones</th>
                                   </tr>
                                 </thead>
@@ -261,7 +292,7 @@ posteriormente usted no haya aplicado la citada reducción en su correspondiente
                                   <tr></tr>
                                 </tbody>
                               </table>
-                              <button type = "button" class="btn btn-success" onclick="addRow('tabla-hijos')">Añadir</button>
+                              <button type = "button" class="btn btn-success" onclick="addRow()">Añadir</button>
                             </div>
                           </div>
                         </div>
@@ -283,7 +314,15 @@ posteriormente usted no haya aplicado la citada reducción en su correspondiente
                                         <th>Grado entre 33% y 65%</th>
                                         <th>Grado igual o superior al 65%</th>
                                         <th>Ayuda a terceras personas o movibilidad reducida</th>
-                                        <th>Conviven únicamente con Vd y con ningún otro familiar</th>
+                                        <th>Convivencia con otros descendientes
+                                          <a href="#" data-toggle="popover" title="Convivencia con otros descendientes"
+                                          data-content="Si alguno de los ascendientes convive también, al menos
+                                          durante la mitad del año, con otros descendientes del mis-
+                                          mo grado que Vd., indique en esta casilla el número total
+                                          de descendientes con los que convive, incluido Vd. (Si los
+                                          ascendientes sólo conviven con Vd., no rellene esta casilla).">
+                                          <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                        </th>
                                         <th>Opciones</th>
                                       </tr>
                                     </thead>
@@ -291,7 +330,7 @@ posteriormente usted no haya aplicado la citada reducción en su correspondiente
                                       <tr></tr>
                                     </tbody>
                                   </table>
-                                  <button type = "button" class="btn btn-success" onclick="addRow('tabla-ascendientes')">Añadir</button>
+                                  <button type = "button" class="btn btn-success" onclick="addRowAscendientes()">Añadir</button>
                                 </div>
                               </div>
                           </div>
