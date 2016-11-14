@@ -73,7 +73,7 @@ function addRowAscendientes(){
       '<input type="radio" name="ayuda" value="ayuda">' +
     '</td>' +
     '<td>' +
-      '<input type="text" class="col-md-2 col-sm-2 col-xs-2">' +
+      '<input type="text">' +
     '</td>' +
     '<td>' +
       '<button type = "button" class="btn btn-danger" onclick="removeRowAscendientes(this)">Borrar</button>' +
