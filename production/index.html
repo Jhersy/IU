@@ -18,6 +18,8 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="images/favicon.gif" href="images/favicon.gif"
   </head>
 
   <body class="nav-md">
@@ -141,25 +143,18 @@
 	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
 	                            Soltero/a, viudo/a, divorciado/a o separado/a
 
-			                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-			                        <ul class="dropdown-menu" role="menu">
-			                          <li>
-		                          		<p >Legalmente con hijos solteros menores de 18 años o incapacitados judicialmente y sometidos a patria potestad prorrogada o rehabilitada que conviven exclusivamente con Vd., sin convivir también con el otro progenitor, siempre que proceda consignar al menos un hijo o descendiente en el apartado 2 de este documento
-										</p>
-			                          </li>
-			                        </ul>
+                              <a href="#" data-toggle="popover" data-placement="bottom" title=""
+                              data-content="Legalmente con hijos solteros menores de 18 años o incapacitados judicialmente y sometidos a patria potestad prorrogada o rehabilitada que conviven exclusivamente con Vd., sin convivir también con el otro progenitor, siempre que proceda consignar al menos un hijo o descendiente en el apartado 2 de este documento.">
+                              <i class="fa fa-info-circle" aria-hidden="true"></i></a>
 			                     </label>
 			                    <div class="clearfix"></div>
 			                    <div class="col-md-3 col-sm-3"></div>
 	                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
 	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
 	                            Casado/a y no separado/a
-			                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-			                        <ul class="dropdown-menu" role="menu">
-			                          <li>
-			                          		<p>Legalmente cuyo cónyuge no obtiene rentas superiores a 1.500 euros anuales, excluidas las exentas</p>
-			                          </li>
-			                        </ul>
+                              <a href="#" data-toggle="popover" data-placement="bottom" title=""
+                              data-content="Legalmente cuyo cónyuge no obtiene rentas superiores a 1.500 euros anuales, excluidas las exentas.">
+                              <i class="fa fa-info-circle" aria-hidden="true"></i></a>
 			                    </label>
 			                    <div class="clearfix"></div>
 			                    <div class="col-md-3 col-sm-3"></div>
@@ -170,8 +165,9 @@
                               <i class="fa fa-info-circle" aria-hidden="true"></i></a>
 			                        
 			                    </label>
-			                <div class="clearfix"></div>
+			                
                           </div>
+                          <div class="clearfix"></div>
                         </form>
                         <form class="form-horizontal form-label-left">
                         	<div class="form-group">
@@ -187,7 +183,7 @@
 									<div class="col-md-3 col-sm-3"></div>
 		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
 		                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-		                            Superior a 65%
+		                            Igual o superior a 65%
 		                            </label>
 		                            <div class="clearfix"></div>
 									<div class="col-md-3 col-sm-3"></div>
@@ -207,7 +203,7 @@
                                 </label>
 
                                 <div class="col-md-2 col-sm-2 col-xs-12">
-                                  <input type="text" id="nif" required="required" class="form-control col-md-7 col-xs-12">
+                                  <input type="date" step="1" min="2013-01-01" min="2016-01-01" min="2016-31-31">
                                 </div>
 
                                 <div class="clearfix"></div>
@@ -217,29 +213,24 @@
                           <div class="form-group">
                               <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Obtención de rendimientos</h2>
                               <div class="clearfix"></div>
-                              <div class="col-md-3 col-sm-3"></div>
-                                <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10"> Marque si en el plazo de los 5 períodos impositivos anteriores ha percibido rendimientos del trabajo con período de
-generación superior a 2 años, a los que, a efectos del cálculo del tipo de retención le haya sido aplicada la reducción por irregularidad contemplada en el artículo 18.2 de la Ley del Impuesto y, sin embargo,
-posteriormente usted no haya aplicado la citada reducción en su correspondiente autoliquidación del Impuesto sobre la Renta
+                              <div class="col-md-3 col-sm-3 "></div>
+                                  <label for="middle-name" class="col-md-7 col-sm-7 col-xs-12">
+                                    <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1" >
+                                    Marque si en el plazo de los 5 períodos impositivos anteriores ha percibido rendimientos del trabajo con período de generación superior a 2 años 
+                                    <a href="#" data-toggle="popover" data-placement="bottom" title=""
+                                    data-content="A estos rendimientos se tendrán que haber aplicado a efecto del cálculo del tipo de rentención, la reducción por rregularidad contemplada en el artículo 18.2 de la Ley del Impuesto y de tal manera que usted no haya aplicado la ctitada reducción en su correspondiente autoliquidacion del impuesto sobre la renta.">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                 </label>
-
-                                <div class="col-md-2 col-sm-2 col-xs-12">
-                                  <input type="text" id="nif" required="required" class="form-control col-md-7 col-xs-12">
-                                </div>
-
                                 <div class="clearfix"></div>
                           </div>
                       </form>
                       </div>
                     </div>
                       <div id="step-2">
-                        <h2 class="StepTitle">Hijos y otros descendientes
-                          menores de 25 años o mayores si son discapacitados
+                        <h2 class="StepTitle">Hijos menores de 25 años o discapacitados
                           que conviven con el perceptor</h2>
                         <div class="linea-hijos">
-                          <p>Datos de los hijos o descendientes menores de 25 años
-                            (o mayores de dicha edad si son discapacitados) que
-                            conviven con Vd. y que no tienen rentas anuales superiores a 8.000 euros.
+                          <p>Datos de los susodichos que no tienen rentas anuales superiores a 8.000 euros.
                           </p>
                           <div class="x_panel">
                             <div class="x_content">
@@ -247,21 +238,21 @@ posteriormente usted no haya aplicado la citada reducción en su correspondiente
                                 <thead>
                                   <tr>
                                     <th>Año de Nacimiento</th>
-                                    <th>Año de adopción o acogimiento
+                                    <th>Año de adopción o acogida
         			                        <a href="#" data-toggle="popover" data-placement="bottom" title="Información"
                                       data-content="Solamente en el caso de hijos adoptados
                                       o de menores acogidos. Tratándose de hijos adoptados
                                       que previamente hubieran estado acogidos, indique
                                       únicamente el año del acogimiento."><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                     </th>
-                                    <th>Grado entre 33% y 65%
+                                    <th>Discapacidad entre 33% y 65%
                                       <a href="#" data-toggle="popover" data-placement="bottom" title="Hijos o descendientes con discapacidad(grado de minusvalía reconocido)"
                                       data-content="Si alguno de los hijos o descendientes
                                       tiene reconocido un grado de minusvalía igual o superior al 33 por 100,
                                       marque alguna de la/s casilla/s que corresponda/n a su situación">
                                       <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                     </th>
-                                    <th>Grado igual o superior al 65%
+                                    <th>Discapacidad igual o superior al 65%
                                       <a href="#" data-toggle="popover" data-placement="bottom" title="Hijos o descendientes con discapacidad(grado de minusvalía reconocido)"
                                       data-content="Si alguno de los hijos o descendientes
                                       tiene reconocido un grado de minusvalía igual o superior al 33 por 100,
