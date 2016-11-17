@@ -30,11 +30,11 @@ function addRow(){
       '</select>' +
     '</td>' +
     '<td>' +
-        '<input type="radio" name="discapacidad" value="33-65">' +
+        '<select class="form-control">' +
+        '<option>Ninguna</option>' +
+        '<option>Entre 35% y 65%</option>' +
+        '<option>Mayor o igual a 65%</option>' +
   '  </td>' +
-    '<td>' +
-      '<input type="radio" name="discapacidad" value="65">' +
-    '</td>' +
     '<td>' +
       '<input type="radio" name="ayuda" value="ayuda">' +
     '</td>' +
@@ -64,11 +64,11 @@ function addRowAscendientes(){
         '</select>' +
     '</td>' +
     '<td>' +
-        '<input type="radio" name="discapacidad" value="33-65">' +
+          '<select class="form-control">' +
+          '<option>Ninguna</option>' +
+          '<option>Entre 35% y 65%</option>' +
+          '<option>Mayor o igual a 65%</option>' +
   '  </td>' +
-    '<td>' +
-      '<input type="radio" name="discapacidad" value="65">' +
-    '</td>' +
     '<td>' +
       '<input type="radio" name="ayuda" value="ayuda">' +
     '</td>' +
