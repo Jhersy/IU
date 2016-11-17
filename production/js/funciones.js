@@ -36,10 +36,10 @@ function addRow(){
         '<option>Mayor o igual a 65%</option>' +
   '  </td>' +
     '<td>' +
-      '<input type="radio" name="ayuda" value="ayuda">' +
+      '<input type="checkbox" name="ayuda" value="ayuda">' +
     '</td>' +
     '<td>' +
-      '<input type="radio" name="convivencia" value="convivencia">' +
+      '<input type="checkbox" name="convivencia" value="convivencia">' +
     '</td>' +
     '<td>' +
       '<button type = "button" class="btn btn-danger" onclick="removeRow(this)">Borrar</button>' +
@@ -70,7 +70,7 @@ function addRowAscendientes(){
           '<option>Mayor o igual a 65%</option>' +
   '  </td>' +
     '<td>' +
-      '<input type="radio" name="ayuda" value="ayuda">' +
+      '<input type="checkbox" name="ayuda" value="ayuda">' +
     '</td>' +
     '<td>' +
       '<input type="text">' +
