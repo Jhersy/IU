@@ -7,26 +7,26 @@ function addRow(){
   $('#tabla-hijos tr:last').after('<tr>' +
     '<td>' +
         '<select class="form-control">' +
+          '<option></option>' +
+          '<option>2016</option>' +
+          '<option>2015</option>' +
+          '<option>2014</option>' +
+          '<option>2013</option>' +
           '<option>2012</option>' +
           '<option>2011</option>' +
           '<option>2010</option>' +
-          '<option>2009</option>' +
-          '<option>2008</option>' +
-          '<option>2007</option>' +
-          '<option>2006</option>' +
-          '<option>2005</option>' +
         '</select>' +
     '</td>' +
     '<td>' +
       '<select class="form-control">' +
-        '<option>2012</option>' +
-        '<option>2011</option>' +
-        '<option>2010</option>' +
-        '<option>2009</option>' +
-        '<option>2008</option>' +
-        '<option>2007</option>' +
-        '<option>2006</option>' +
-        '<option>2005</option>' +
+          '<option></option>' +
+          '<option>2016</option>' +
+          '<option>2015</option>' +
+          '<option>2014</option>' +
+          '<option>2013</option>' +
+          '<option>2012</option>' +
+          '<option>2011</option>' +
+          '<option>2010</option>' +
       '</select>' +
     '</td>' +
     '<td>' +
@@ -53,14 +53,15 @@ function addRowAscendientes(){
   $('#tabla-ascendientes tr:last').after('<tr>' +
     '<td>' +
         '<select class="form-control">' +
-          '<option>2012</option>' +
-          '<option>2011</option>' +
-          '<option>2010</option>' +
-          '<option>2009</option>' +
-          '<option>2008</option>' +
-          '<option>2007</option>' +
-          '<option>2006</option>' +
-          '<option>2005</option>' +
+          '<option></option>' +
+          '<option>1950</option>' +
+          '<option>1949</option>' +
+          '<option>1948</option>' +
+          '<option>1947</option>' +
+          '<option>1946</option>' +
+          '<option>1945</option>' +
+          '<option>1944</option>' +
+          '<option>1943</option>' +
         '</select>' +
     '</td>' +
     '<td>' +
