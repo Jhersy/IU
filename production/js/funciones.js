@@ -115,7 +115,7 @@ function addRowAscendientes(){
       '<input type="checkbox" name="ayuda" value="ayuda">' +
     '</td>' +
     '<td>' +
-      '<input type="text">' +
+      '<input type="checkbox">' +
     '</td>' +
     '<td>' +
       '<button type = "button" class="btn btn-danger" onclick="removeRowAscendientes(this)">Borrar</button>' +
