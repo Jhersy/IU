@@ -67,6 +67,13 @@ function SmartWizard(target, options) {
             return false;
         });
         $($this.buttons.finish).click(function() {
+            if(confirm('Manifiesto ser contribuyente del IRPF y declaro que son ciertos los datos anteriormente indicados.')){
+                alert('Su solicitud se ha enviado con exito');
+                window.location="../production/index.html";
+            }
+
+            return false;
+            /*
             if(!$(this).hasClass('buttonDisabled')){
                 if($.isFunction($this.options.onFinish)) {
                     var context = { fromStep: $this.curStepIdx + 1 };
@@ -81,6 +88,7 @@ function SmartWizard(target, options) {
                 }
             }
             return false;
+            */
         });
 
         $($this.steps).bind("click", function(e){
