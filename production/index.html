@@ -60,7 +60,6 @@
                             <span class="step_no">1</span>
                             <span class="step_descr">
                                               Datos del perceptor<br />
-                                              <small>Aquí iría la descripción</small>
                                           </span>
                           </a>
                         </li>
@@ -68,8 +67,7 @@
                           <a href="#step-2">
                             <span class="step_no">2</span>
                             <span class="step_descr">
-                                              Hijos / Abuelos<br />
-                                              <small>Step 2 description</small>
+                                              Hijos / Mayores de 65 años<br />
                                           </span>
                           </a>
                         </li>
@@ -78,39 +76,27 @@
                             <span class="step_no">3</span>
                             <span class="step_descr">
                                               Pensiones / Pagos por adquisición<br />
-                                              <small>Step 3 description</small>
-                                          </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#step-4">
-                            <span class="step_no">4</span>
-                            <span class="step_descr">
-                                              Fecha / Firma<br />
-                                              <small>Step 4 description</small>
                                           </span>
                           </a>
                         </li>
                       </ul>
                       <div id="step-1">
-                        <div class=""><h3>Datos del perceptor</h3><div class="clearfix"></div></div>
+
                         <form class="form-horizontal form-label-left">
+                          <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Datos del perceptor*</h2>
+                          <div class="clearfix"></div> 
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="apellido-nombre">Apellido y Nombre <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="text" id="apellido-nombre" name="apellido-nombre" required="required" class="form-control col-md-12 col-xs-12">
+                            <div class="col-md-6  col-md-offset-3 col-sm-6 col-xs-12">
+                              <input type="text" required="required" class="form-control col-md-7 col-xs-12" placeholder="Nombre y apellidos">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nif">NIF <span class="required">*</span>
-                            </label>
-                            <div class="col-md-2 col-sm-2 col-xs-12">
-                              <input type="text" id="nif" required="required" class="form-control col-md-7 col-xs-12">
+                            <div class="col-md-2  col-md-offset-3 col-sm-2 col-xs-12">
+                              <input type="text" required="required" class="form-control col-md-7 col-xs-12" placeholder="NIF">
                             </div>
-                            <label for="middle-name" class="control-label col-md-2 col-sm-2 col-xs-12">Año de nacimiento</label>
-                            <div class="col-md-2 col-sm-2 col-xs-12">
+                            <div class="col-md-2  col-md-offset-2 col-sm-2 col-xs-12">
                               <select class="form-control">
+                                <option>Año de nacimiento</option>
                                 <option>2012</option>
                                 <option>2011</option>
                                 <option>2010</option>
@@ -124,7 +110,6 @@
                           </div>
                         </form>
                         <form class="form-horizontal form-label-left">
-                          <div class="form-group">
                             <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Situación familiar*</h2>
                             <div class="clearfix"></div>
                             <div class="radio">
@@ -158,6 +143,7 @@
 			                    </label>
 
                           </div>
+
                           <div class="clearfix"></div>
                         </form>
                         <form class="form-horizontal form-label-left">
@@ -179,6 +165,7 @@
 		                            <div class="clearfix"></div>
 									<div class="col-md-3 col-sm-3"></div>
 		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+
 		                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >
 		                            Necesidad de ayuda de terceras personas o movilidad reducida
 		                            </label>
@@ -199,11 +186,9 @@
                               <div class="col-md-3 col-sm-3"></div>
                                 <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10"> Si el trabajo actual ha supuesto el traslado de residencia a un nuevo municipio, <u>indique fecha de traslado </u>
                                 </label>
-
-                                <div class="col-md-2 col-sm-2 col-xs-12">
-                                  <input type="date" step="1" min="2013-01-01" min="2016-01-01" min="2016-31-31">
-                                </div>
-
+                            <div class="col-md-2 col-sm-6 col-xs-6">
+                              <input type="date" id="apellido-nombre" name="apellido-nombre" required="required" class="form-control col-md-12 col-xs-12">
+                            </div>
                                 <div class="clearfix"></div>
                           </div>
                       </form>
@@ -223,7 +208,6 @@
                           </div>
                       </form>
                       </div>
-                    </div>
                       <div id="step-2">
                         <h2 class="StepTitle">Hijos menores de 25 años o discapacitados
                           que conviven con el perceptor</h2>
@@ -332,19 +316,20 @@
                         <h2 class="StepTitle">Retribuciones percibidas por cónyuge e hijos</h2>
                           <form class="form-horizontal">
                             <div class="form-group">
-                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="pension">Pensión compensatoria en favor del cónyuge</label>
+                              <label class="control-label col-md-4 col-sm-3 col-xs-12" for="pension">Pensión compensatoria en favor del cónyuge</label>
                               <div class="col-md-2 col-sm-2 col-xs-12">
                                 <input type="text" id="pension" required="required" class="form-control col-md-7 col-xs-12">
                               </div>
                             </div>
                             <div class="form-group">
-                              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="pension">Anualidades por alimentos en favor de los hijos</label>
+                              <label class="control-label col-md-4 col-sm-3 col-xs-12" for="pension">Anualidades por alimentos en favor de los hijos</label>
                               <div class="col-md-2 col-sm-2 col-xs-12">
                                 <input type="text" id="alimentos" required="required" class="form-control col-md-7 col-xs-12">
                                 <input type="hidden">
                               </div>
                             </div>
                           </form>
+                        <h2 class="StepTitle">Pagos por la adiquisición  o rehabilitación  de la vivienda habitual</h2>
                         <!--<h2 class="StepTitle">Pagos por la adquisición
                           o rehabilitación de la vivienda habitual utilizando
                           financiación ajena, con derecho a deducción en el IRPF</h2>
@@ -352,46 +337,17 @@
                             los contribuyentes que hayan adquirido su vivienda habitual,
                             o hayan satisfecho cantidades por obras de rehabilitación
                             de la misma, antes del 1 de enero de 2013.</p>-->
-                          <form class="form-horizontal">
-                            <div class="form-group">
-                              <label for="pagos-adquisicion">
-                                <input type="checkbox" name="adquisicion" value="si">
+                            <div  class="col-md-10 col-md-offset-1">
+                               <input type="checkbox" name="adquisicion" value="si">
                                 He efectuado pagos por préstamos destinados a la
                                 adquisición o rehabilitación de la vivienda habitual
                                 por los que voy a tener derecho a deducción
                                 y la cuantía total de las retribuciones íntegras es inferior a 33.007,20 euros
                                 anuales.
-                              </label>
                             </div>
-                          </form>
+ 
                       </div>
-                      <div id="step-4">
-                        <h2 class="StepTitle">Fecha y firma de la comunicación</h2>
-                        <p>Manifiesto ser contribuyente del IRPF y declaro que
-                          son ciertos los datos arriba indicados, presentando
-                          ante la empresa o entidad pagadora la presente comunicación
-                          de mi situación personal y familiar, o de
-                          su variación, a los efectos previstos en el
-                          artículo 88 del Reglamento del IRPF.</p>
-                          <form class="form-horizontal">
-                            <div class="form-group">
-                              <div class="col-md-6 col-sm-12 col-xs-12">
-                                <input type="text" class="form-control" placeholder="Ciudad">
-                              </div>
-                              <div class="col-md-3 col-sm-3 col-xs-3">
-                                <input type="date" class="form-control" placeholder="Día">
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                    <!-- End SmartWizard Content -->
-
-
-                    <!-- End SmartWizard Content -->
                   </div>
-                </div>
               </div>
             </div>
         <!-- /page content -->
