@@ -1,6 +1,47 @@
 $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="popover"]').popover(); //Inicializo todos los popover
+    $('[data-toggle="tooltip"]').tooltip(); //Inicializo todos los tooltip
 });
+
+function validarNombre(inputNombre){
+  if (!$(inputNombre).val()) { //Compruebo si el campo esta vacío
+    $(inputNombre).parent().removeClass('has-success');
+    $(inputNombre).parent().addClass('has-error');
+    $(inputNombre).after("<span id='error'>Campo vacío</span>");
+    $('#error').css("color", "red");
+  }else{
+    var palabras = $(inputNombre).val().split(' ');
+
+      if(palabras.length >= 2){ //Compruebo que tiene al menos un nombre y un apellido
+        $('#error').hide();
+        $(inputNombre).parent().removeClass('has-error');
+        $(inputNombre).parent().addClass('has-success');
+      }else{
+        $('#error').hide();
+        $(inputNombre).parent().removeClass('has-success');
+        $(inputNombre).parent().addClass('has-error');
+        $(inputNombre).after("<span id='error'>Debe introducir nombre y apellidos</span>");
+        $('#error').css("color", "red");
+      }
+  }
+}
+
+function validarDni(dni){
+  var nifRexp = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i;
+  var str = $(dni).val().toString().toUpperCase();
+
+    if(!nifRexp.test(str)){
+      $(dni).parent().removeClass('has-success');
+      $(dni).parent().addClass('has-error');
+      $(dni).after("<span id='error_dni'>Formato DNI erróneo</span>");
+      $('#error_dni').css("color", "red");
+    }else{
+      $('#error_dni').hide();
+      $(dni).parent().removeClass('has-error');
+      $(dni).parent().addClass('has-success');
+    }
+
+}
 
 function addRow(){
 

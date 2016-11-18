@@ -84,15 +84,20 @@
 
                         <form class="form-horizontal form-label-left">
                           <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Datos del perceptor*</h2>
-                          <div class="clearfix"></div> 
+                          <div class="clearfix"></div>
                           <div class="form-group">
                             <div class="col-md-6  col-md-offset-3 col-sm-6 col-xs-12">
-                              <input type="text" required="required" class="form-control col-md-7 col-xs-12" placeholder="Nombre y apellidos">
+                              <input type="text" required="required"
+                              class="form-control col-md-7 col-xs-12"
+                              placeholder="Nombre y apellidos"
+                              onblur="validarNombre(this)">
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-md-2  col-md-offset-3 col-sm-2 col-xs-12">
-                              <input type="text" required="required" class="form-control col-md-7 col-xs-12" placeholder="NIF">
+                              <input type="text" required="required"
+                              class="form-control col-md-7 col-xs-12"
+                              placeholder="12345678X" onblur="validarDni(this)">
                             </div>
                             <div class="col-md-2  col-md-offset-2 col-sm-2 col-xs-12">
                               <select class="form-control">
@@ -346,7 +351,7 @@
                                 y la cuantía total de las retribuciones íntegras es inferior a 33.007,20 euros
                                 anuales.
                             </div>
- 
+
                       </div>
                   </div>
               </div>
@@ -372,6 +377,7 @@
     <script src="../build/js/custom.min.js"></script>
     <!-- Funciones añadidas -->
     <script src="js/funciones.js"></script>
+
     <!-- jQuery Smart Wizard -->
     <script>
       $(document).ready(function() {
