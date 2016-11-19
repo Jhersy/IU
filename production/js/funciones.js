@@ -1,15 +1,35 @@
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover(); //Inicializo todos los popover
-    $('[data-toggle="tooltip"]').tooltip(); //Inicializo todos los tooltip
+
+    $('.buttonNext').click(function() {
+      alert("Hola");
+    });
+
+    $('#modalFinalizar').on('click','.btn-primary', function () {
+
+        $('#modalFinalizar').modal('hide');
+        $('#modalFin').modal('show');
+
+        setTimeout(function() { $("#modalFin").modal('hide'); }, 3000); //Cierro el modal a los 2 segundos
+
+        $('#modalFin').on('hidden.bs.modal', function () { //Después de que el modal se haya escondido, recargo la página
+          location.reload();
+        });
+    });
 });
 
 function validarNombre(inputNombre){
+  $('#error-nom').hide();
+
   if (!$(inputNombre).val()) { //Compruebo si el campo esta vacío
+
     $(inputNombre).parent().removeClass('has-success');
     $(inputNombre).parent().addClass('has-error');
     $(inputNombre).after("<span id='error'>Campo vacío</span>");
     $('#error').css("color", "red");
+
   }else{
+
     var palabras = $(inputNombre).val().split(' ');
 
       if(palabras.length >= 2){ //Compruebo que tiene al menos un nombre y un apellido
@@ -29,18 +49,30 @@ function validarNombre(inputNombre){
 function validarDni(dni){
   var nifRexp = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i;
   var str = $(dni).val().toString().toUpperCase();
+  $('#error-nif').hide();
 
+  if (!$(dni).val()){ //Compruebo si el campo esta vacío
+    $('#error_dni').hide();
+    $('#error-vacio').hide();
+    $(dni).parent().removeClass('has-success');
+    $(dni).parent().addClass('has-error');
+    $(dni).after("<span id='error-vacio'>Campo vacío</span>");
+    $('#error-vacio').css("color", "red");
+  }else{
     if(!nifRexp.test(str)){
+      $('#error_dni').hide();
+      $('#error-vacio').hide();
       $(dni).parent().removeClass('has-success');
       $(dni).parent().addClass('has-error');
       $(dni).after("<span id='error_dni'>Formato DNI erróneo</span>");
       $('#error_dni').css("color", "red");
     }else{
       $('#error_dni').hide();
+      $('#error-vacio').hide();
       $(dni).parent().removeClass('has-error');
       $(dni).parent().addClass('has-success');
     }
-
+  }
 }
 
 function addRow(){

@@ -59,7 +59,47 @@ function SmartWizard(target, options) {
         this.contentWidth = $this.elmStepContainer.width();
 
         $($this.buttons.next).click(function() {
-            $this.goForward();
+
+            if(!$('#campoNombre').val()){
+                $('#error-nom').show();
+                $('#error-nom').css({"color": "red", "font-size": "0.9em"});
+                var nomVacio = "1";
+            }else{
+                $('#error-nom').hide();
+                var nomVacio = "0";
+            }
+
+             if(!$('#campoDni').val()){
+                $('#error-nif').show();
+                $('#error-nif').css({"color": "red", "font-size": "0.9em"});
+                var dniVacio = "1";
+            }else{
+                $('#error-nif').hide();
+                var dniVacio = "0";
+            }
+
+            if (!$("input[name='optionsRadios']:checked").val()) {
+               var radioFamiliar = "1";
+               $('#error-familiar').show();
+               $('#error-familiar').css({"color": "red", "font-size": "0.9em"});
+            }else{
+                $('#error-familiar').hide();
+                var radioFamiliar = "0";
+            } 
+
+            if(!$("input[name='optionsDiscapacidad']:checked").val()){
+                var radioDiscapacidad = "1";
+                $('#error-discapacidad').show();
+                $('#error-discapacidad').css({"color": "red", "font-size": "0.9em"});
+            }else{
+                $('#error-discapacidad').hide();
+                var radioDiscapacidad = "0";
+            }
+
+            if(radioFamiliar == "0" && radioDiscapacidad == "0" && dniVacio == "0" && nomVacio == "0") {
+              $this.goForward();
+            }
+
             return false;
         });
         $($this.buttons.previous).click(function() {
@@ -67,10 +107,8 @@ function SmartWizard(target, options) {
             return false;
         });
         $($this.buttons.finish).click(function() {
-            if(confirm('Manifiesto ser contribuyente del IRPF y declaro que son ciertos los datos anteriormente indicados.')){
-                alert('Su solicitud se ha enviado con exito');
-                window.location="../IU/index.html";
-            }
+            
+            $('#modalFinalizar').modal('show');
 
             return false;
         });

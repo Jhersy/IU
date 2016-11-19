@@ -90,14 +90,17 @@
                               <input type="text" required="required"
                               class="form-control col-md-7 col-xs-12"
                               placeholder="Nombre y apellidos"
-                              onblur="validarNombre(this)">
+                              onblur="validarNombre(this)"
+                              id="campoNombre"><br>
+                              <span id="error-nom" style="display: none;">Campo vacío</span>
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-md-2  col-md-offset-3 col-sm-2 col-xs-12">
                               <input type="text" required="required"
                               class="form-control col-md-7 col-xs-12"
-                              placeholder="12345678X" onblur="validarDni(this)">
+                              placeholder="12345678X" onblur="validarDni(this)" id="campoDni"><br>
+                              <span id="error-nif" style="display: none;">Campo vacío</span>
                             </div>
                             <div class="col-md-2  col-md-offset-2 col-sm-2 col-xs-12">
                               <select class="form-control">
@@ -115,8 +118,10 @@
                           </div>
                         </form>
                         <form class="form-horizontal form-label-left">
-                            <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Situación familiar*</h2>
+                            <h2 class="control-label col-md-3 col-sm-3 col-xs-12" id="familiar">Situación familiar*</h2><br>
+                            <span id="error-familiar" style="display: none;">Seleccione al menos una opción</span>
                             <div class="clearfix"></div>
+
                             <div class="radio">
 
                             	<div class="col-md-3 col-sm-3"></div>
@@ -131,7 +136,7 @@
 			                    <div class="clearfix"></div>
 			                    <div class="col-md-3 col-sm-3"></div>
 	                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
-	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option2" >
 	                            Casado/a y no separado/a
                               <a href="#" data-toggle="popover" data-placement="bottom" title=""
                               data-content="Legalmente cuyo cónyuge no obtiene rentas superiores a 1.500 euros anuales, excluidas las exentas.">
@@ -140,7 +145,7 @@
 			                    <div class="clearfix"></div>
 			                    <div class="col-md-3 col-sm-3"></div>
 	                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
-	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Situación familiar distinta de las anteriores
+	                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option3" >Situación familiar distinta de las anteriores
                               <a href="#" data-toggle="popover" data-placement="bottom" title="Solteros sin hijos, casados cuyo cónyuge obtiene rentas superiores a 1.500 euros anuales, etc."
                               data-content="Marque también esta casilla si no desea manifestar su situación familiar.">
                               <i class="fa fa-info-circle" aria-hidden="true"></i></a>
@@ -153,37 +158,36 @@
                         </form>
                         <form class="form-horizontal form-label-left">
                         	<div class="form-group">
-	                            <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Discapacidad</h2>
-	                            <div class="clearfix"></div>
-	                            <div class="radio">
-									<div class="col-md-3 col-sm-3"></div>
-		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
-		                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
-		                            Entre 33%  y 65%
-		                            </label>
-		                            <div class="clearfix"></div>
-									<div class="col-md-3 col-sm-3"></div>
-		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
-		                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
-		                            Igual o superior a 65%
-		                            </label>
-		                            <div class="clearfix"></div>
-									<div class="col-md-3 col-sm-3"></div>
-		                            <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
-
-		                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >
-		                            Necesidad de ayuda de terceras personas o movilidad reducida
-		                            </label>
-                                <div class="clearfix"></div>
-                  <div class="col-md-3 col-sm-3"></div>
+                            <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Discapacidad</h2><br>
+                            <span id="error-discapacidad" style="display: none;">Seleccione al menos una opción</span>
+                            <div class="clearfix"></div>
+                            <div class="radio radioDiscapacidad">
+                                <div class="col-md-3 col-sm-3"></div>
                                 <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option4" >
-                                Sin discapacidad
+                                <input type="radio" name="optionsDiscapacidad" id="optionsRadios1" value="option1" >
+                                Entre 33%  y 65%
                                 </label>
-	                            </div>
-
-                        	</div>
-                	    </form>
+                                <div class="clearfix"></div>
+                                 <div class="col-md-3 col-sm-3"></div>
+                                  <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+                                  <input type="radio" name="optionsDiscapacidad" id="optionsRadios2" value="option2" >
+                                  Igual o superior a 65%
+                                  </label>
+                                <div class="clearfix"></div>
+                                 <div class="col-md-3 col-sm-3"></div>
+                                  <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+                                  <input type="radio" name="optionsDiscapacidad" id="optionsRadios3" value="option3" >
+                                  Necesidad de ayuda de terceras personas o movilidad reducida
+                                  </label>
+                                <div class="clearfix"></div>
+                                <div class="col-md-3 col-sm-3"></div>
+                                  <label for="middle-name" class="col-md-4 col-sm-6 col-xs-10">
+                                  <input type="radio" name="optionsDiscapacidad" id="optionsRadios4" value="option4" >
+                                  Sin discapacidad
+                                  </label>
+                        	   </div>
+                             </div>
+                	     </form>
                       <form class="form-horizontal form-label-left">
                           <div class="form-group">
                               <h2 class="control-label col-md-3 col-sm-3 col-xs-12">Movilidad geográfica</h2>
@@ -324,25 +328,18 @@
                             <div class="form-group">
                               <label class="control-label col-md-4 col-sm-3 col-xs-12" for="pension">Pensión compensatoria en favor del cónyuge</label>
                               <div class="col-md-2 col-sm-2 col-xs-12">
-                                <input type="text" id="pension" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="pension" required="required" class="form-control col-md-7 col-xs-12" placeholder ="Ej: 1.000€">
                               </div>
                             </div>
                             <div class="form-group">
                               <label class="control-label col-md-4 col-sm-3 col-xs-12" for="pension">Anualidades por alimentos en favor de los hijos</label>
                               <div class="col-md-2 col-sm-2 col-xs-12">
-                                <input type="text" id="alimentos" required="required" class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="alimentos" required="required" class="form-control col-md-7 col-xs-12" placeholder ="Ej: 15.000€" >
                                 <input type="hidden">
                               </div>
                             </div>
                           </form>
                         <h2 class="StepTitle">Pagos por la adiquisición  o rehabilitación  de la vivienda habitual</h2>
-                        <!--<h2 class="StepTitle">Pagos por la adquisición
-                          o rehabilitación de la vivienda habitual utilizando
-                          financiación ajena, con derecho a deducción en el IRPF</h2>
-                          <p><strong>Importante:</strong> sólo podrán cumplimentar este apartado
-                            los contribuyentes que hayan adquirido su vivienda habitual,
-                            o hayan satisfecho cantidades por obras de rehabilitación
-                            de la misma, antes del 1 de enero de 2013.</p>-->
                             <div  class="col-md-10 col-md-offset-1">
                                <input type="checkbox"  name="adquisicion" value="si">
                                 He efectuado pagos por préstamos destinados a la
@@ -353,6 +350,37 @@
                             </div>
 
                       </div>
+                      <div class="modal fade" tabindex="-1" role="dialog" id="modalFinalizar" style="display: none;">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title">Confirmación</h4>
+                            </div>
+                            <div class="modal-body">
+                              <p style="font-size: 110%;">Manifiesto ser contribuyente del IRPF y declaro que son ciertos los datos anteriormente indicados.</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                              <button type="button" class="btn btn-primary">Aceptar</button>
+                            </div>
+                          </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                      </div><!-- /.modal -->
+
+                     <div class="modal fade" tabindex="-1" role="dialog" id="modalFin" style="display: none;">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                          <div class="modal-header">
+                              <h4 class="modal-title">Finalización</h4>
+                            </div>
+                            <div class="modal-body">
+                              <p style="font-size: 130%;">Su solicitud se ha enviado con exito</p>
+                            </div>
+                          </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                      </div><!-- /.modal -->
+
                   </div>
               </div>
             </div>
