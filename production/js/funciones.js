@@ -10,7 +10,7 @@ $(document).ready(function(){
         $('#modalFinalizar').modal('hide');
         $('#modalFin').modal('show');
 
-        setTimeout(function() { $("#modalFin").modal('hide'); }, 3000); //Cierro el modal a los 2 segundos
+        setTimeout(function() { $("#modalFin").modal('hide'); }, 1500); //Cierro el modal a los 2 segundos
 
         $('#modalFin').on('hidden.bs.modal', function () { //Después de que el modal se haya escondido, recargo la página
           location.reload();
