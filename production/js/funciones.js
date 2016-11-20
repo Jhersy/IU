@@ -1,10 +1,6 @@
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover(); //Inicializo todos los popover
 
-    $('.buttonNext').click(function() {
-      alert("Hola");
-    });
-
     $('#modalFinalizar').on('click','.btn-primary', function () {
 
         $('#modalFinalizar').modal('hide');
